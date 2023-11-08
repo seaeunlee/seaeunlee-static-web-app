@@ -7,7 +7,7 @@ app.http('message', {
         context.log(`Http function processed request for url "${request.url}"`);
 
         // Check if the URL contains "api/subscription"
-        if (request.url.includes('api/subscriptions')) {
+        if (request.url.includes('api/subscription')) {
             return { status: 200, body: 'OK' };
         } else {
             return { status: 404, body: 'Not Found' };
