@@ -1,6 +1,6 @@
 const { app } = require('@azure/functions');
 
-app.http('', {
+app.http('*', {
     methods: ['GET', 'POST'],
     authLevel: 'anonymous',
     handler: async (request, context) => {
@@ -8,7 +8,7 @@ app.http('', {
 
         // Check if the URL contains "api/subscription"
         if (request.url.includes('api/subscription')) {
-            return { status: 200, body: 'OK 1' };
+            return { status: 200, body: 'OK 2' };
         } else {
             return { status: 404, body: 'Not Found' };
         }
